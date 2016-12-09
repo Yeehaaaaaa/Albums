@@ -11,6 +11,8 @@ import Foundation
 protocol AlbumsManagerProtocol: class {
 
   func fetchUser(completion: @escaping (Result<[User]>) -> Void)
+  func fetchAlbum(_ userId: Int, completion: @escaping (Result<[Album]>) -> Void)
+  func fetchThumbnails(_ albumId: Int, completion: @escaping (Result<[Thumbnail]>) -> Void)
 }
 
 class AlbumsManager: AlbumsManagerProtocol {
@@ -22,6 +24,8 @@ class AlbumsManager: AlbumsManagerProtocol {
   // *********************************************************************
   // MARK: - Properties
   fileprivate var isFetchingUsers = false
+  fileprivate var isFetchingAlbums = false
+  fileprivate var isFetchingThumbnails = false
 
   // *********************************************************************
   // MARK: - Init
@@ -47,6 +51,42 @@ class AlbumsManager: AlbumsManagerProtocol {
       guard let `self` = self else { return }
 
       self.isFetchingUsers = false
+      completion(result)
+    }
+  }
+
+  // *********************************************************************
+  // MARK: - Album
+  func fetchAlbum(_ userId: Int, completion: @escaping (Result<[Album]>) -> Void) {
+
+    if isFetchingAlbums {
+      completion(Result.failure(RequestError.requestAlreadyStart))
+    }
+
+    isFetchingAlbums = true
+
+    albumsService.getAlbums(userId) { [weak self] result in
+      guard let `self` = self else { return }
+
+      self.isFetchingAlbums = false
+      completion(result)
+    }
+  }
+
+  // *********************************************************************
+  // MARK: - Thumbnails
+  func fetchThumbnails(_ albumId: Int, completion: @escaping (Result<[Thumbnail]>) -> Void) {
+
+    if isFetchingThumbnails {
+      completion(Result.failure(RequestError.requestAlreadyStart))
+    }
+
+    isFetchingThumbnails = true
+
+    albumsService.getAlbums(albumId) { [weak self] result in
+      guard let `self` = self else { return }
+
+      self.isFetchingThumbnails = false
       completion(result)
     }
   }

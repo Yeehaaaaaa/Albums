@@ -50,17 +50,20 @@ class UserTableViewController: UIViewController {
     tableView.register(UINib(nibName: "UserTableViewCell", bundle: nil), forCellReuseIdentifier: userCellIdentifier)
   }
 
-//  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//
-//    switch (segue.identifier, segue.destination) {
-//
-//    case (albumSegueIdentifier?, let viewController as CommentTableViewController):
-//      if let cell = sender as? Int {
-//
-//
-//      }
-//    }
-//  }
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+    switch (segue.identifier, segue.destination) {
+
+    case (albumSegueIdentifier?, let viewController as AlbumsTableViewController):
+      if let userId = sender as? Int {
+
+        viewController.albumsManager = albumsManager
+        viewController.userId = userId
+      }
+    default:
+      break
+    }
+  }
 }
 
 // *********************************************************************
@@ -116,6 +119,7 @@ extension UserTableViewController: UITableViewDelegate {
 
     tableView.deselectRow(at: indexPath, animated: true)
 
-    self.performSegue(withIdentifier: albumSegueIdentifier, sender: self)
+    self.performSegue(withIdentifier: albumSegueIdentifier,
+                      sender: dataSource[(indexPath as IndexPath).row].id)
   }
 }

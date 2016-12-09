@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -71,11 +72,50 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="TYH-bY-9nG" id="jVD-ft-gy9"/>
+                        <segue destination="VpK-Bg-Fmh" kind="show" identifier="goToThumbnails" id="aE4-sI-dFF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qv8-39-9a7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1981.5999999999999" y="-544.67766116941539"/>
+            <point key="canvasLocation" x="1854" y="-546"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="60T-Su-uiu">
+            <objects>
+                <viewController id="VpK-Bg-Fmh" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Hoh-rf-55K"/>
+                        <viewControllerLayoutGuide type="bottom" id="XOE-IW-SoY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RgT-ob-03K">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="on3-YD-ezs">
+                                <rect key="frame" x="0.0" y="231" width="375" height="205"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="B3z-K9-z95">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="on3-YD-ezs" firstAttribute="centerY" secondItem="RgT-ob-03K" secondAttribute="centerY" id="BDN-gv-GAp"/>
+                            <constraint firstItem="on3-YD-ezs" firstAttribute="centerX" secondItem="RgT-ob-03K" secondAttribute="centerX" id="H8C-ma-leq"/>
+                            <constraint firstItem="on3-YD-ezs" firstAttribute="height" secondItem="RgT-ob-03K" secondAttribute="height" multiplier="0.306" id="TUm-PW-KpF"/>
+                            <constraint firstAttribute="trailing" secondItem="on3-YD-ezs" secondAttribute="trailing" id="cZc-YQ-oUZ"/>
+                            <constraint firstItem="on3-YD-ezs" firstAttribute="leading" secondItem="RgT-ob-03K" secondAttribute="leading" id="pTb-3o-7I4"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xJ9-Fs-ALs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2709.5999999999999" y="-546.47676161919048"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bFN-Xr-i5w">

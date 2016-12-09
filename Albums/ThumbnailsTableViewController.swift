@@ -1,5 +1,5 @@
 //
-//  AlbumsTableViewController.swift
+//  ThumbnailsTableViewController.swift
 //  Albums
 //
 //  Created by Arthur Daurel on 09/12/2016.
@@ -9,16 +9,14 @@
 import Foundation
 import UIKit
 
-class AlbumsTableViewController: UIViewController {
+class ThumbnailsTableViewController: UIViewController {
 
   // *********************************************************************
   // MARK: - IBOutlets
-  @IBOutlet weak var tableView: UITableView! {
+  @IBOutlet weak var collectionView: UITableView! {
     didSet {
-      tableView.estimatedRowHeight = 100
-      tableView.rowHeight = UITableViewAutomaticDimension
-      tableView.delegate = self
-      tableView.dataSource = self
+      collectionView.delegate = self
+      collectionView.dataSource = self
     }
   }
 
@@ -28,20 +26,15 @@ class AlbumsTableViewController: UIViewController {
 
   // *********************************************************************
   // MARK: - Properties
-  fileprivate var dataSource = [Album]()
-  var userId: Int!
-
-  // *********************************************************************
-  // MARK: - Constant
-  fileprivate var albumCellIdentifier = "albumCell"
-  fileprivate var thumbnailsSegueIdentifier = "goToThumbnails"
+  fileprivate var dataSource = [Thumbnail]()
+  var albumId: Int!
 
   // *********************************************************************
   // MARK: - LifeCycle
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    self.title = "Albums"
+    self.title = "Thumbnail"
 
     nibRegistration()
     getAlbums(albumsManager, id: userId)
@@ -49,25 +42,14 @@ class AlbumsTableViewController: UIViewController {
 
   private func nibRegistration() {
 
-    tableView.register(UINib(nibName: "AlbumTableViewCell", bundle: nil), forCellReuseIdentifier: albumCellIdentifier)
+    collectionView.register(UINib(nibName: "ChallengesCollectionViewCell", bundle: nil),
+                            forCellWithReuseIdentifier: cellIdentifier)
   }
-
-  //  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-  //
-  //    switch (segue.identifier, segue.destination) {
-  //
-  //    case (albumSegueIdentifier?, let viewController as CommentTableViewController):
-  //      if let cell = sender as? Int {
-  //
-  //
-  //      }
-  //    }
-  //  }
 }
 
 // *********************************************************************
 // MARK: - Request
-extension AlbumsTableViewController {
+extension ThumbnailsTableViewController {
 
   fileprivate func getAlbums(_ manager: AlbumsManagerProtocol, id: Int) {
 
@@ -87,7 +69,7 @@ extension AlbumsTableViewController {
 
 // *********************************************************************
 // MARK: - UITableViewDataSource
-extension AlbumsTableViewController: UITableViewDataSource {
+extension ThumbnailsTableViewController: UITableViewDataSource {
 
   func numberOfSections(in tableView: UITableView) -> Int {
     return 1
@@ -112,7 +94,7 @@ extension AlbumsTableViewController: UITableViewDataSource {
 
 // *********************************************************************
 // MARK: - UITableViewDelegate
-extension AlbumsTableViewController: UITableViewDelegate {
+extension ThumbnailsTableViewController: UITableViewDelegate {
 
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
