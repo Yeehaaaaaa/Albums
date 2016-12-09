@@ -7,13 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C80FC9D99DE0B9FBE52666B /* Pods_Albums.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DB26E4C2311FDDA230CBDEA /* Pods_Albums.framework */; };
 		8E01B2631DFAE43800910BCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E01B2621DFAE43800910BCD /* AppDelegate.swift */; };
-		8E01B2651DFAE43800910BCD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E01B2641DFAE43800910BCD /* ViewController.swift */; };
+		8E01B2651DFAE43800910BCD /* UserTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E01B2641DFAE43800910BCD /* UserTableViewController.swift */; };
 		8E01B2681DFAE43800910BCD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E01B2661DFAE43800910BCD /* Main.storyboard */; };
 		8E01B26A1DFAE43800910BCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E01B2691DFAE43800910BCD /* Assets.xcassets */; };
 		8E01B26D1DFAE43800910BCD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E01B26B1DFAE43800910BCD /* LaunchScreen.storyboard */; };
 		8E01B2781DFAE43800910BCD /* AlbumsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E01B2771DFAE43800910BCD /* AlbumsTests.swift */; };
 		8E01B2831DFAE43800910BCD /* AlbumsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E01B2821DFAE43800910BCD /* AlbumsUITests.swift */; };
+		8E01B3691DFAF69500910BCD /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E01B3681DFAF69500910BCD /* UserTableViewCell.swift */; };
+		8E01B36B1DFAF6B000910BCD /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E01B36A1DFAF6B000910BCD /* Network.swift */; };
+		8E01B36D1DFAF70D00910BCD /* RequestParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E01B36C1DFAF70D00910BCD /* RequestParameters.swift */; };
+		8E01B36F1DFAF71B00910BCD /* ResultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E01B36E1DFAF71B00910BCD /* ResultManager.swift */; };
+		8E01B3711DFAF76F00910BCD /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E01B3701DFAF76F00910BCD /* UserTableViewCell.xib */; };
+		8E01B3741DFAF89400910BCD /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E01B3731DFAF89400910BCD /* AppManager.swift */; };
+		8E01B3761DFAF8D800910BCD /* AlbumsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E01B3751DFAF8D800910BCD /* AlbumsManager.swift */; };
+		8E01B3781DFAF94300910BCD /* AlbumsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E01B3771DFAF94300910BCD /* AlbumsService.swift */; };
+		8E01B37A1DFAF9BC00910BCD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E01B3791DFAF9BC00910BCD /* User.swift */; };
+		8E01B37C1DFB039700910BCD /* AlbumsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E01B37B1DFB039700910BCD /* AlbumsTableViewController.swift */; };
+		8E01B37E1DFB045B00910BCD /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E01B37D1DFB045B00910BCD /* Album.swift */; };
+		8E01B3801DFB080A00910BCD /* AlbumTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E01B37F1DFB080A00910BCD /* AlbumTableViewCell.xib */; };
+		8E01B3821DFB083C00910BCD /* AlbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E01B3811DFB083C00910BCD /* AlbumTableViewCell.swift */; };
+		8E01B3841DFB0A9100910BCD /* ThumbnailsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E01B3831DFB0A9100910BCD /* ThumbnailsCollectionViewController.swift */; };
+		8E01B3861DFB0BB300910BCD /* Thumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E01B3851DFB0BB300910BCD /* Thumbnail.swift */; };
+		8E01B3881DFB0F6C00910BCD /* ThumbnailsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E01B3871DFB0F6C00910BCD /* ThumbnailsCollectionViewCell.swift */; };
+		8E01B38A1DFB0F7B00910BCD /* ThumbnailsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E01B3891DFB0F7B00910BCD /* ThumbnailsCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +52,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		66D672A87FBF66EBE82192D5 /* Pods-Albums.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Albums.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Albums/Pods-Albums.debug.xcconfig"; sourceTree = "<group>"; };
 		8E01B25F1DFAE43800910BCD /* Albums.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Albums.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E01B2621DFAE43800910BCD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8E01B2641DFAE43800910BCD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8E01B2641DFAE43800910BCD /* UserTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewController.swift; sourceTree = "<group>"; };
 		8E01B2671DFAE43800910BCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8E01B2691DFAE43800910BCD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E01B26C1DFAE43800910BCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +66,25 @@
 		8E01B27E1DFAE43800910BCD /* AlbumsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlbumsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E01B2821DFAE43800910BCD /* AlbumsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsUITests.swift; sourceTree = "<group>"; };
 		8E01B2841DFAE43800910BCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E01B3681DFAF69500910BCD /* UserTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		8E01B36A1DFAF6B000910BCD /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		8E01B36C1DFAF70D00910BCD /* RequestParameters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestParameters.swift; sourceTree = "<group>"; };
+		8E01B36E1DFAF71B00910BCD /* ResultManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultManager.swift; sourceTree = "<group>"; };
+		8E01B3701DFAF76F00910BCD /* UserTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
+		8E01B3731DFAF89400910BCD /* AppManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
+		8E01B3751DFAF8D800910BCD /* AlbumsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumsManager.swift; sourceTree = "<group>"; };
+		8E01B3771DFAF94300910BCD /* AlbumsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumsService.swift; sourceTree = "<group>"; };
+		8E01B3791DFAF9BC00910BCD /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		8E01B37B1DFB039700910BCD /* AlbumsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumsTableViewController.swift; sourceTree = "<group>"; };
+		8E01B37D1DFB045B00910BCD /* Album.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		8E01B37F1DFB080A00910BCD /* AlbumTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlbumTableViewCell.xib; sourceTree = "<group>"; };
+		8E01B3811DFB083C00910BCD /* AlbumTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumTableViewCell.swift; sourceTree = "<group>"; };
+		8E01B3831DFB0A9100910BCD /* ThumbnailsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThumbnailsCollectionViewController.swift; sourceTree = "<group>"; };
+		8E01B3851DFB0BB300910BCD /* Thumbnail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Thumbnail.swift; sourceTree = "<group>"; };
+		8E01B3871DFB0F6C00910BCD /* ThumbnailsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThumbnailsCollectionViewCell.swift; sourceTree = "<group>"; };
+		8E01B3891DFB0F7B00910BCD /* ThumbnailsCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ThumbnailsCollectionViewCell.xib; sourceTree = "<group>"; };
+		9DB26E4C2311FDDA230CBDEA /* Pods_Albums.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Albums.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3B485615CDEB5C168B6863B /* Pods-Albums.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Albums.release.xcconfig"; path = "Pods/Target Support Files/Pods-Albums/Pods-Albums.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C80FC9D99DE0B9FBE52666B /* Pods_Albums.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +113,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		483475EE1810A174EB3C776D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9DB26E4C2311FDDA230CBDEA /* Pods_Albums.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4C541E87134E8BFC29841C4E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				66D672A87FBF66EBE82192D5 /* Pods-Albums.debug.xcconfig */,
+				E3B485615CDEB5C168B6863B /* Pods-Albums.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		8E01B2561DFAE43800910BCD = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +137,8 @@
 				8E01B2761DFAE43800910BCD /* AlbumsTests */,
 				8E01B2811DFAE43800910BCD /* AlbumsUITests */,
 				8E01B2601DFAE43800910BCD /* Products */,
+				4C541E87134E8BFC29841C4E /* Pods */,
+				483475EE1810A174EB3C776D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,12 +155,13 @@
 		8E01B2611DFAE43800910BCD /* Albums */ = {
 			isa = PBXGroup;
 			children = (
-				8E01B2621DFAE43800910BCD /* AppDelegate.swift */,
-				8E01B2641DFAE43800910BCD /* ViewController.swift */,
+				8E01B3631DFAF63700910BCD /* App */,
+				8E01B3721DFAF7CF00910BCD /* Controller */,
+				8E01B3661DFAF66900910BCD /* Model */,
+				8E01B3641DFAF64C00910BCD /* Manager */,
+				8E01B3651DFAF65F00910BCD /* Service */,
+				8E01B3671DFAF67C00910BCD /* Views */,
 				8E01B2661DFAE43800910BCD /* Main.storyboard */,
-				8E01B2691DFAE43800910BCD /* Assets.xcassets */,
-				8E01B26B1DFAE43800910BCD /* LaunchScreen.storyboard */,
-				8E01B26E1DFAE43800910BCD /* Info.plist */,
 			);
 			path = Albums;
 			sourceTree = "<group>";
@@ -125,6 +184,70 @@
 			path = AlbumsUITests;
 			sourceTree = "<group>";
 		};
+		8E01B3631DFAF63700910BCD /* App */ = {
+			isa = PBXGroup;
+			children = (
+				8E01B2621DFAE43800910BCD /* AppDelegate.swift */,
+				8E01B2691DFAE43800910BCD /* Assets.xcassets */,
+				8E01B26B1DFAE43800910BCD /* LaunchScreen.storyboard */,
+				8E01B26E1DFAE43800910BCD /* Info.plist */,
+			);
+			name = App;
+			sourceTree = "<group>";
+		};
+		8E01B3641DFAF64C00910BCD /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				8E01B3731DFAF89400910BCD /* AppManager.swift */,
+				8E01B36C1DFAF70D00910BCD /* RequestParameters.swift */,
+				8E01B36E1DFAF71B00910BCD /* ResultManager.swift */,
+				8E01B3751DFAF8D800910BCD /* AlbumsManager.swift */,
+			);
+			name = Manager;
+			sourceTree = "<group>";
+		};
+		8E01B3651DFAF65F00910BCD /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				8E01B36A1DFAF6B000910BCD /* Network.swift */,
+				8E01B3771DFAF94300910BCD /* AlbumsService.swift */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
+		8E01B3661DFAF66900910BCD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8E01B3791DFAF9BC00910BCD /* User.swift */,
+				8E01B37D1DFB045B00910BCD /* Album.swift */,
+				8E01B3851DFB0BB300910BCD /* Thumbnail.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		8E01B3671DFAF67C00910BCD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8E01B3681DFAF69500910BCD /* UserTableViewCell.swift */,
+				8E01B3701DFAF76F00910BCD /* UserTableViewCell.xib */,
+				8E01B3811DFB083C00910BCD /* AlbumTableViewCell.swift */,
+				8E01B37F1DFB080A00910BCD /* AlbumTableViewCell.xib */,
+				8E01B3871DFB0F6C00910BCD /* ThumbnailsCollectionViewCell.swift */,
+				8E01B3891DFB0F7B00910BCD /* ThumbnailsCollectionViewCell.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		8E01B3721DFAF7CF00910BCD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8E01B2641DFAE43800910BCD /* UserTableViewController.swift */,
+				8E01B37B1DFB039700910BCD /* AlbumsTableViewController.swift */,
+				8E01B3831DFB0A9100910BCD /* ThumbnailsCollectionViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +255,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8E01B2871DFAE43800910BCD /* Build configuration list for PBXNativeTarget "Albums" */;
 			buildPhases = (
+				EF34471E11E09D18C5835436 /* [CP] Check Pods Manifest.lock */,
 				8E01B25B1DFAE43800910BCD /* Sources */,
 				8E01B25C1DFAE43800910BCD /* Frameworks */,
 				8E01B25D1DFAE43800910BCD /* Resources */,
+				EA7F71EBA54A101D5614796A /* [CP] Embed Pods Frameworks */,
+				6C82A66C9C6884629BAF3B76 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -235,8 +361,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E01B3711DFAF76F00910BCD /* UserTableViewCell.xib in Resources */,
 				8E01B26D1DFAE43800910BCD /* LaunchScreen.storyboard in Resources */,
+				8E01B38A1DFB0F7B00910BCD /* ThumbnailsCollectionViewCell.xib in Resources */,
 				8E01B26A1DFAE43800910BCD /* Assets.xcassets in Resources */,
+				8E01B3801DFB080A00910BCD /* AlbumTableViewCell.xib in Resources */,
 				8E01B2681DFAE43800910BCD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,13 +386,75 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6C82A66C9C6884629BAF3B76 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Albums/Pods-Albums-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EA7F71EBA54A101D5614796A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Albums/Pods-Albums-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF34471E11E09D18C5835436 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8E01B25B1DFAE43800910BCD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E01B2651DFAE43800910BCD /* ViewController.swift in Sources */,
+				8E01B3741DFAF89400910BCD /* AppManager.swift in Sources */,
+				8E01B2651DFAE43800910BCD /* UserTableViewController.swift in Sources */,
+				8E01B37C1DFB039700910BCD /* AlbumsTableViewController.swift in Sources */,
+				8E01B37A1DFAF9BC00910BCD /* User.swift in Sources */,
+				8E01B3691DFAF69500910BCD /* UserTableViewCell.swift in Sources */,
+				8E01B36F1DFAF71B00910BCD /* ResultManager.swift in Sources */,
+				8E01B36B1DFAF6B000910BCD /* Network.swift in Sources */,
+				8E01B3881DFB0F6C00910BCD /* ThumbnailsCollectionViewCell.swift in Sources */,
+				8E01B3781DFAF94300910BCD /* AlbumsService.swift in Sources */,
+				8E01B3861DFB0BB300910BCD /* Thumbnail.swift in Sources */,
+				8E01B3761DFAF8D800910BCD /* AlbumsManager.swift in Sources */,
+				8E01B36D1DFAF70D00910BCD /* RequestParameters.swift in Sources */,
+				8E01B3841DFB0A9100910BCD /* ThumbnailsCollectionViewController.swift in Sources */,
+				8E01B3821DFB083C00910BCD /* AlbumTableViewCell.swift in Sources */,
 				8E01B2631DFAE43800910BCD /* AppDelegate.swift in Sources */,
+				8E01B37E1DFB045B00910BCD /* Album.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +604,7 @@
 		};
 		8E01B2881DFAE43800910BCD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 66D672A87FBF66EBE82192D5 /* Pods-Albums.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = WX3RBAMURF;
@@ -426,6 +618,7 @@
 		};
 		8E01B2891DFAE43800910BCD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E3B485615CDEB5C168B6863B /* Pods-Albums.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = WX3RBAMURF;
@@ -514,6 +707,7 @@
 				8E01B2891DFAE43800910BCD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8E01B28A1DFAE43800910BCD /* Build configuration list for PBXNativeTarget "AlbumsTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +716,7 @@
 				8E01B28C1DFAE43800910BCD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8E01B28D1DFAE43800910BCD /* Build configuration list for PBXNativeTarget "AlbumsUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +725,7 @@
 				8E01B28F1DFAE43800910BCD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
