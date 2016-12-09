@@ -21,7 +21,6 @@ class AppManager {
 
   func setUpDependencyInjection() {
 
-    // User dependence
     container.register(AlbumsServiceProtocol.self) { _ in AlbumsService() }
     container.register(AlbumsManagerProtocol.self) { r in
       AlbumsManager(service: r.resolve(AlbumsServiceProtocol.self)!)
