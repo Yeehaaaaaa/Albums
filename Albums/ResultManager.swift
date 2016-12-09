@@ -16,7 +16,6 @@ enum Result<T> {
 }
 
 enum RequestError: Error {
-  case internetError(String)
   case invalidJson
   case failure(NSError)
   case requestAlreadyStart
