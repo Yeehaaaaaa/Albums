@@ -38,7 +38,7 @@ class ThumbnailsCollectionViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    self.title = "Thumbnail"
+    self.title = "Thumbnails"
 
     nibRegistration()
     getThumbnails(albumsManager, id: albumId)
