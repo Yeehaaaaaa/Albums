@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		8C80FC9D99DE0B9FBE52666B /* Pods_Albums.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DB26E4C2311FDDA230CBDEA /* Pods_Albums.framework */; };
 		8E01B2631DFAE43800910BCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E01B2621DFAE43800910BCD /* AppDelegate.swift */; };
-		8E01B2651DFAE43800910BCD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E01B2641DFAE43800910BCD /* ViewController.swift */; };
+		8E01B2651DFAE43800910BCD /* UserTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E01B2641DFAE43800910BCD /* UserTableViewController.swift */; };
 		8E01B2681DFAE43800910BCD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E01B2661DFAE43800910BCD /* Main.storyboard */; };
 		8E01B26A1DFAE43800910BCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E01B2691DFAE43800910BCD /* Assets.xcassets */; };
 		8E01B26D1DFAE43800910BCD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E01B26B1DFAE43800910BCD /* LaunchScreen.storyboard */; };
@@ -20,6 +20,11 @@
 		8E01B36D1DFAF70D00910BCD /* RequestParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E01B36C1DFAF70D00910BCD /* RequestParameters.swift */; };
 		8E01B36F1DFAF71B00910BCD /* ResultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E01B36E1DFAF71B00910BCD /* ResultManager.swift */; };
 		8E01B3711DFAF76F00910BCD /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E01B3701DFAF76F00910BCD /* UserTableViewCell.xib */; };
+		8E01B3741DFAF89400910BCD /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E01B3731DFAF89400910BCD /* AppManager.swift */; };
+		8E01B3761DFAF8D800910BCD /* AlbumsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E01B3751DFAF8D800910BCD /* AlbumsManager.swift */; };
+		8E01B3781DFAF94300910BCD /* AlbumsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E01B3771DFAF94300910BCD /* AlbumsService.swift */; };
+		8E01B37A1DFAF9BC00910BCD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E01B3791DFAF9BC00910BCD /* User.swift */; };
+		8E01B37C1DFB039700910BCD /* AlbumsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E01B37B1DFB039700910BCD /* AlbumsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +48,7 @@
 		66D672A87FBF66EBE82192D5 /* Pods-Albums.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Albums.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Albums/Pods-Albums.debug.xcconfig"; sourceTree = "<group>"; };
 		8E01B25F1DFAE43800910BCD /* Albums.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Albums.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E01B2621DFAE43800910BCD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8E01B2641DFAE43800910BCD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8E01B2641DFAE43800910BCD /* UserTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewController.swift; sourceTree = "<group>"; };
 		8E01B2671DFAE43800910BCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8E01B2691DFAE43800910BCD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E01B26C1DFAE43800910BCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -59,6 +64,11 @@
 		8E01B36C1DFAF70D00910BCD /* RequestParameters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestParameters.swift; sourceTree = "<group>"; };
 		8E01B36E1DFAF71B00910BCD /* ResultManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultManager.swift; sourceTree = "<group>"; };
 		8E01B3701DFAF76F00910BCD /* UserTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
+		8E01B3731DFAF89400910BCD /* AppManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
+		8E01B3751DFAF8D800910BCD /* AlbumsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumsManager.swift; sourceTree = "<group>"; };
+		8E01B3771DFAF94300910BCD /* AlbumsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumsService.swift; sourceTree = "<group>"; };
+		8E01B3791DFAF9BC00910BCD /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		8E01B37B1DFB039700910BCD /* AlbumsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumsTableViewController.swift; sourceTree = "<group>"; };
 		9DB26E4C2311FDDA230CBDEA /* Pods_Albums.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Albums.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3B485615CDEB5C168B6863B /* Pods-Albums.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Albums.release.xcconfig"; path = "Pods/Target Support Files/Pods-Albums/Pods-Albums.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -164,7 +174,6 @@
 			isa = PBXGroup;
 			children = (
 				8E01B2621DFAE43800910BCD /* AppDelegate.swift */,
-				8E01B2641DFAE43800910BCD /* ViewController.swift */,
 				8E01B2691DFAE43800910BCD /* Assets.xcassets */,
 				8E01B26B1DFAE43800910BCD /* LaunchScreen.storyboard */,
 				8E01B26E1DFAE43800910BCD /* Info.plist */,
@@ -175,8 +184,10 @@
 		8E01B3641DFAF64C00910BCD /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				8E01B3731DFAF89400910BCD /* AppManager.swift */,
 				8E01B36C1DFAF70D00910BCD /* RequestParameters.swift */,
 				8E01B36E1DFAF71B00910BCD /* ResultManager.swift */,
+				8E01B3751DFAF8D800910BCD /* AlbumsManager.swift */,
 			);
 			name = Manager;
 			sourceTree = "<group>";
@@ -185,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				8E01B36A1DFAF6B000910BCD /* Network.swift */,
+				8E01B3771DFAF94300910BCD /* AlbumsService.swift */,
 			);
 			name = Service;
 			sourceTree = "<group>";
@@ -192,6 +204,7 @@
 		8E01B3661DFAF66900910BCD /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8E01B3791DFAF9BC00910BCD /* User.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -208,6 +221,8 @@
 		8E01B3721DFAF7CF00910BCD /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				8E01B2641DFAE43800910BCD /* UserTableViewController.swift */,
+				8E01B37B1DFB039700910BCD /* AlbumsTableViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -401,10 +416,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E01B2651DFAE43800910BCD /* ViewController.swift in Sources */,
+				8E01B3741DFAF89400910BCD /* AppManager.swift in Sources */,
+				8E01B2651DFAE43800910BCD /* UserTableViewController.swift in Sources */,
+				8E01B37C1DFB039700910BCD /* AlbumsTableViewController.swift in Sources */,
+				8E01B37A1DFAF9BC00910BCD /* User.swift in Sources */,
 				8E01B3691DFAF69500910BCD /* UserTableViewCell.swift in Sources */,
 				8E01B36F1DFAF71B00910BCD /* ResultManager.swift in Sources */,
 				8E01B36B1DFAF6B000910BCD /* Network.swift in Sources */,
+				8E01B3781DFAF94300910BCD /* AlbumsService.swift in Sources */,
+				8E01B3761DFAF8D800910BCD /* AlbumsManager.swift in Sources */,
 				8E01B36D1DFAF70D00910BCD /* RequestParameters.swift in Sources */,
 				8E01B2631DFAE43800910BCD /* AppDelegate.swift in Sources */,
 			);

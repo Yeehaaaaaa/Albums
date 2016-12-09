@@ -17,19 +17,13 @@ final class Network {
 
   // *********************************************************************
   // MARK: - Properties
-  fileprivate let baseUrl: String = "http://92.222.18.222:3000/v1/"
+  fileprivate let baseUrl: String = "https://jsonplaceholder.typicode.com/"
   fileprivate var requestParameters: RequestParameters!
 
-  // *********************************************************************
-  // MARK: - Constant
-  fileprivate let storyBoardName = "Starter"
-  fileprivate let controllerIdentitifier = "Starter"
-  fileprivate let TRANSITION_ANIMATION_DURATION = 0.3
 
   // *********************************************************************
   // MARK: - Access
   func request(_ requestParameters: RequestParameters, completion: @escaping (Result<JSON>) -> Void) {
-
 
     self.requestParameters = requestParameters
     sendRequest() { result in
@@ -53,13 +47,13 @@ final class Network {
       case .failure:
         guard let statusCode = response.response,
           let data = response.data else {
-            let error = NSError(domain: "challengesWar.ios.challengesWar", code: 1000, userInfo: [NSLocalizedDescriptionKey: "Alamofire failed"])
+            let error = NSError(domain: "albums.ios.albums", code: 1000, userInfo: [NSLocalizedDescriptionKey: "Alamofire failed"])
             completion(Result.failure(RequestError.failure(error)))
             return
         }
 
         let json = JSON(data: data)
-        let error = NSError(domain: "challengesWar.ios.challengesWar", code: statusCode.statusCode, userInfo: [NSLocalizedDescriptionKey: json["error"].stringValue])
+        let error = NSError(domain: "albums.ios.albums", code: statusCode.statusCode, userInfo: [NSLocalizedDescriptionKey: json["error"].stringValue])
 
         completion(Result.failure(RequestError.failure(error)))
       }
