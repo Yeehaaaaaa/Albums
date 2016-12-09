@@ -1,14 +1,15 @@
 //
-//  ViewController.swift
+//  AlbumsTableViewController.swift
 //  Albums
 //
 //  Created by Arthur Daurel on 09/12/2016.
 //  Copyright © 2016 Arthur Daurel. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
-class UserTableViewController: UIViewController {
+class AlbumsTableViewController: UIViewController {
 
   // *********************************************************************
   // MARK: - IBOutlets
@@ -50,22 +51,22 @@ class UserTableViewController: UIViewController {
     tableView.register(UINib(nibName: "UserTableViewCell", bundle: nil), forCellReuseIdentifier: userCellIdentifier)
   }
 
-//  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//
-//    switch (segue.identifier, segue.destination) {
-//
-//    case (albumSegueIdentifier?, let viewController as CommentTableViewController):
-//      if let cell = sender as? Int {
-//
-//
-//      }
-//    }
-//  }
+  //  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+  //
+  //    switch (segue.identifier, segue.destination) {
+  //
+  //    case (albumSegueIdentifier?, let viewController as CommentTableViewController):
+  //      if let cell = sender as? Int {
+  //
+  //
+  //      }
+  //    }
+  //  }
 }
 
 // *********************************************************************
 // MARK: - Request
-extension UserTableViewController {
+extension AlbumsTableViewController {
 
   fileprivate func getUsers(_ manager: AlbumsManagerProtocol) {
 
@@ -85,7 +86,7 @@ extension UserTableViewController {
 
 // *********************************************************************
 // MARK: - UITableViewDataSource
-extension UserTableViewController: UITableViewDataSource {
+extension AlbumsTableViewController: UITableViewDataSource {
 
   func numberOfSections(in tableView: UITableView) -> Int {
     return 1
@@ -100,7 +101,7 @@ extension UserTableViewController: UITableViewDataSource {
     guard let cell = tableView.dequeueReusableCell(withIdentifier: userCellIdentifier,
                                                    for: indexPath) as? UserTableViewCell
       else {
-      fatalError("Error dequeueReusableCell with identifier: \(userCellIdentifier)")
+        fatalError("Error dequeueReusableCell with identifier: \(userCellIdentifier)")
     }
 
     cell.setupView(dataSource[(indexPath as IndexPath).row])
@@ -110,7 +111,7 @@ extension UserTableViewController: UITableViewDataSource {
 
 // *********************************************************************
 // MARK: - UITableViewDelegate
-extension UserTableViewController: UITableViewDelegate {
+extension AlbumsTableViewController: UITableViewDelegate {
 
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 

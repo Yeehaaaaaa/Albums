@@ -13,11 +13,12 @@ class UserTableViewCell: UITableViewCell {
 
   // *********************************************************************
   // MARK: - IBOutlets
-
+  @IBOutlet weak var nameLabel: UILabel!
   
   // *********************************************************************
   // MARK: - LifeCycle
-  func setupView() {
+  func setupView(_ user: User) {
 
+    nameLabel.text = user.name
   }
 }

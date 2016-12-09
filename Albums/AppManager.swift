@@ -16,7 +16,6 @@ class AppManager {
   // *********************************************************************
   // MARK: - Properties
   let container = Container()
-  var users: User?
 
   fileprivate init() {}
 

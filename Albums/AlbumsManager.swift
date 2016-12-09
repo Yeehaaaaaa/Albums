@@ -47,12 +47,6 @@ class AlbumsManager: AlbumsManagerProtocol {
       guard let `self` = self else { return }
 
       self.isFetchingUsers = false
-      switch result {
-      case .success(let users):
-        AppManager.sharedInstance.users = users
-      default:
-        break
-      }
       completion(result)
     }
   }

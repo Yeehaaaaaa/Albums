@@ -35,8 +35,8 @@ class AlbumsService: AlbumsServiceProtocol {
       switch result {
       case .success(let json):
         print(json)
-        let user = User(json: json)
-        completion(Result.success(user))
+        let users = User.getUsers(json)
+        completion(Result.success(users))
       case .failure(let error):
         completion(Result.failure(error))
       }
