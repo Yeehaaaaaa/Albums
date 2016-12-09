@@ -107,6 +107,7 @@ extension UserTableViewController: UITableViewDataSource {
     }
 
     cell.setupView(dataSource[(indexPath as IndexPath).row])
+    cell.backgroundColor = UIColor.clear
     return cell
   }
 }

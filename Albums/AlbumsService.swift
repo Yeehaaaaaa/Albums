@@ -68,7 +68,7 @@ class AlbumsService: AlbumsServiceProtocol {
   // MARK: - Thumbnails
   func getThumbnails(_ userId: Int, completion: @escaping (Result<[Thumbnail]>) -> Void) {
 
-    let url = RootURL.album.string + String(userId) + "/" + RootURL.thumbnail.string
+    let url = RootURL.album.string + "/" + String(userId) + "/" + RootURL.thumbnail.string
     let requestParameters = RequestParameters(method: .get, url: url, parameters: [:])
 
     Network().request(requestParameters) { result in

@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Kingfisher.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Albums.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,12 +32,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>69E93A83E0185B65552E9AF11FAD0EF1</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>6E0CEA2CB0A8D5046B6DB527E5C3FE55</key>
+		<key>6961798CD18EE9A0E0C85A29F836BB59</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -42,7 +42,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B2CE92989BD135967E355F12ADEDBADA</key>
+		<key>AF6098FEC84DDC1E3A5A2B007B263283</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C4944FEC314D1A66588651D006273ADE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C642250D0D3B1851D8B98D071E998B3F</key>
 		<dict>
 			<key>primary</key>
 			<true/>

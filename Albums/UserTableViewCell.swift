@@ -14,11 +14,15 @@ class UserTableViewCell: UITableViewCell {
   // *********************************************************************
   // MARK: - IBOutlets
   @IBOutlet weak var nameLabel: UILabel!
+  @IBOutlet weak var usernameLabel: UILabel!
+  @IBOutlet weak var emailLabel: UILabel!
   
   // *********************************************************************
   // MARK: - LifeCycle
   func setupView(_ user: User) {
 
-    nameLabel.text = user.name
+    nameLabel.text = "Name: \(user.name)"
+    usernameLabel.text = "Username: \(user.username)"
+    emailLabel.text = "Email: \(user.email)"
   }
 }

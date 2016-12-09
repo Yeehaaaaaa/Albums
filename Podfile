@@ -7,4 +7,5 @@ target 'Albums' do
   pod 'SwiftyJSON'
   pod 'Alamofire', '~> 4.0'
   pod 'Swinject', '2.0.0-beta.2'
+  pod 'Kingfisher', '~> 3.0'
 end

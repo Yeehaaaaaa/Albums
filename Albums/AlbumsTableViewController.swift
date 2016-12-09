@@ -52,17 +52,20 @@ class AlbumsTableViewController: UIViewController {
     tableView.register(UINib(nibName: "AlbumTableViewCell", bundle: nil), forCellReuseIdentifier: albumCellIdentifier)
   }
 
-  //  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-  //
-  //    switch (segue.identifier, segue.destination) {
-  //
-  //    case (albumSegueIdentifier?, let viewController as CommentTableViewController):
-  //      if let cell = sender as? Int {
-  //
-  //
-  //      }
-  //    }
-  //  }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+  
+      switch (segue.identifier, segue.destination) {
+  
+      case (thumbnailsSegueIdentifier?, let viewController as ThumbnailsCollectionViewController):
+        if let albumId = sender as? Int {
+
+          viewController.albumsManager = albumsManager
+          viewController.albumId = albumId
+        }
+      default:
+        break
+      }
+    }
 }
 
 // *********************************************************************
@@ -106,6 +109,7 @@ extension AlbumsTableViewController: UITableViewDataSource {
     }
 
     cell.setupView(dataSource[(indexPath as IndexPath).row])
+    cell.backgroundColor = UIColor.clear
     return cell
   }
 }
@@ -118,6 +122,6 @@ extension AlbumsTableViewController: UITableViewDelegate {
 
     tableView.deselectRow(at: indexPath, animated: true)
 
-    self.performSegue(withIdentifier: thumbnailsSegueIdentifier, sender: self)
+    self.performSegue(withIdentifier: thumbnailsSegueIdentifier, sender: dataSource[(indexPath as IndexPath).row].userId)
   }
 }

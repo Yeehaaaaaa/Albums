@@ -30,7 +30,7 @@ class User {
   convenience required init(json: JSON) {
 
     let id = json["id"].intValue,
-    username = json["login"].stringValue,
+    username = json["username"].stringValue,
     email = json["email"].stringValue,
     name = json["name"].stringValue
 

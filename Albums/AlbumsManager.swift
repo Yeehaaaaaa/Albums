@@ -83,7 +83,7 @@ class AlbumsManager: AlbumsManagerProtocol {
 
     isFetchingThumbnails = true
 
-    albumsService.getAlbums(albumId) { [weak self] result in
+    albumsService.getThumbnails(albumId) { [weak self] result in
       guard let `self` = self else { return }
 
       self.isFetchingThumbnails = false

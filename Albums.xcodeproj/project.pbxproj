@@ -28,8 +28,10 @@
 		8E01B37E1DFB045B00910BCD /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E01B37D1DFB045B00910BCD /* Album.swift */; };
 		8E01B3801DFB080A00910BCD /* AlbumTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E01B37F1DFB080A00910BCD /* AlbumTableViewCell.xib */; };
 		8E01B3821DFB083C00910BCD /* AlbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E01B3811DFB083C00910BCD /* AlbumTableViewCell.swift */; };
-		8E01B3841DFB0A9100910BCD /* ThumbnailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E01B3831DFB0A9100910BCD /* ThumbnailsTableViewController.swift */; };
+		8E01B3841DFB0A9100910BCD /* ThumbnailsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E01B3831DFB0A9100910BCD /* ThumbnailsCollectionViewController.swift */; };
 		8E01B3861DFB0BB300910BCD /* Thumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E01B3851DFB0BB300910BCD /* Thumbnail.swift */; };
+		8E01B3881DFB0F6C00910BCD /* ThumbnailsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E01B3871DFB0F6C00910BCD /* ThumbnailsCollectionViewCell.swift */; };
+		8E01B38A1DFB0F7B00910BCD /* ThumbnailsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E01B3891DFB0F7B00910BCD /* ThumbnailsCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,8 +79,10 @@
 		8E01B37D1DFB045B00910BCD /* Album.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		8E01B37F1DFB080A00910BCD /* AlbumTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlbumTableViewCell.xib; sourceTree = "<group>"; };
 		8E01B3811DFB083C00910BCD /* AlbumTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumTableViewCell.swift; sourceTree = "<group>"; };
-		8E01B3831DFB0A9100910BCD /* ThumbnailsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThumbnailsTableViewController.swift; sourceTree = "<group>"; };
+		8E01B3831DFB0A9100910BCD /* ThumbnailsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThumbnailsCollectionViewController.swift; sourceTree = "<group>"; };
 		8E01B3851DFB0BB300910BCD /* Thumbnail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Thumbnail.swift; sourceTree = "<group>"; };
+		8E01B3871DFB0F6C00910BCD /* ThumbnailsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThumbnailsCollectionViewCell.swift; sourceTree = "<group>"; };
+		8E01B3891DFB0F7B00910BCD /* ThumbnailsCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ThumbnailsCollectionViewCell.xib; sourceTree = "<group>"; };
 		9DB26E4C2311FDDA230CBDEA /* Pods_Albums.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Albums.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3B485615CDEB5C168B6863B /* Pods-Albums.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Albums.release.xcconfig"; path = "Pods/Target Support Files/Pods-Albums/Pods-Albums.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -228,6 +232,8 @@
 				8E01B3701DFAF76F00910BCD /* UserTableViewCell.xib */,
 				8E01B3811DFB083C00910BCD /* AlbumTableViewCell.swift */,
 				8E01B37F1DFB080A00910BCD /* AlbumTableViewCell.xib */,
+				8E01B3871DFB0F6C00910BCD /* ThumbnailsCollectionViewCell.swift */,
+				8E01B3891DFB0F7B00910BCD /* ThumbnailsCollectionViewCell.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -237,7 +243,7 @@
 			children = (
 				8E01B2641DFAE43800910BCD /* UserTableViewController.swift */,
 				8E01B37B1DFB039700910BCD /* AlbumsTableViewController.swift */,
-				8E01B3831DFB0A9100910BCD /* ThumbnailsTableViewController.swift */,
+				8E01B3831DFB0A9100910BCD /* ThumbnailsCollectionViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -357,6 +363,7 @@
 			files = (
 				8E01B3711DFAF76F00910BCD /* UserTableViewCell.xib in Resources */,
 				8E01B26D1DFAE43800910BCD /* LaunchScreen.storyboard in Resources */,
+				8E01B38A1DFB0F7B00910BCD /* ThumbnailsCollectionViewCell.xib in Resources */,
 				8E01B26A1DFAE43800910BCD /* Assets.xcassets in Resources */,
 				8E01B3801DFB080A00910BCD /* AlbumTableViewCell.xib in Resources */,
 				8E01B2681DFAE43800910BCD /* Main.storyboard in Resources */,
@@ -439,11 +446,12 @@
 				8E01B3691DFAF69500910BCD /* UserTableViewCell.swift in Sources */,
 				8E01B36F1DFAF71B00910BCD /* ResultManager.swift in Sources */,
 				8E01B36B1DFAF6B000910BCD /* Network.swift in Sources */,
+				8E01B3881DFB0F6C00910BCD /* ThumbnailsCollectionViewCell.swift in Sources */,
 				8E01B3781DFAF94300910BCD /* AlbumsService.swift in Sources */,
 				8E01B3861DFB0BB300910BCD /* Thumbnail.swift in Sources */,
 				8E01B3761DFAF8D800910BCD /* AlbumsManager.swift in Sources */,
 				8E01B36D1DFAF70D00910BCD /* RequestParameters.swift in Sources */,
-				8E01B3841DFB0A9100910BCD /* ThumbnailsTableViewController.swift in Sources */,
+				8E01B3841DFB0A9100910BCD /* ThumbnailsCollectionViewController.swift in Sources */,
 				8E01B3821DFB083C00910BCD /* AlbumTableViewCell.swift in Sources */,
 				8E01B2631DFAE43800910BCD /* AppDelegate.swift in Sources */,
 				8E01B37E1DFB045B00910BCD /* Album.swift in Sources */,
