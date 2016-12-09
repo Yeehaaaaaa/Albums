@@ -6,8 +6,6 @@
 //  Copyright © 2016 Arthur Daurel. All rights reserved.
 //
 
-import Foundation
-
 import UIKit
 import Foundation
 import SwiftyJSON
