@@ -9,7 +9,9 @@
 import Foundation
 
 protocol AlbumsManagerProtocol: class {
+  var users: [User] { get set }
 
+  func userPersistant() -> [User]
   func fetchUser(completion: @escaping (Result<[User]>) -> Void)
   func fetchAlbum(_ userId: Int, completion: @escaping (Result<[Album]>) -> Void)
   func fetchThumbnails(_ albumId: Int, completion: @escaping (Result<[Thumbnail]>) -> Void)
@@ -23,6 +25,8 @@ class AlbumsManager: AlbumsManagerProtocol {
 
   // *********************************************************************
   // MARK: - Properties
+  var users = [User]()
+
   fileprivate var isFetchingUsers = false
   fileprivate var isFetchingAlbums = false
   fileprivate var isFetchingThumbnails = false
@@ -35,6 +39,14 @@ class AlbumsManager: AlbumsManagerProtocol {
 
   convenience init() {
     self.init(service: AlbumsService())
+  }
+
+  // *********************************************************************
+  // MARK: - Publics
+  func userPersistant() -> [User] {
+
+    self.users = User.getPersistantUser()
+    return users
   }
 
   // *********************************************************************
