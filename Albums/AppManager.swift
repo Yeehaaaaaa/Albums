@@ -26,4 +26,12 @@ class AppManager {
       AlbumsManager(service: r.resolve(AlbumsServiceProtocol.self)!)
     }
   }
+
+  func setUpDependencyInjectionTesting() {
+
+    container.register(AlbumsServiceProtocol.self) { _ in AlbumsTestService() }
+    container.register(AlbumsManagerProtocol.self) { r in
+      AlbumsManager(service: r.resolve(AlbumsServiceProtocol.self)!)
+    }
+  }
 }
