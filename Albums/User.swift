@@ -18,6 +18,11 @@ class User {
   var name: String
   var email: String
 
+  fileprivate struct PropertyKey {
+    static let DocumentsDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
+    static let ArchiveURL: URL = DocumentsDirectory.appendingPathComponent("user")
+  }
+
   // *********************************************************************
   // MARK: - LifeCycle
   init(id: Int, username: String, name: String, email: String) {
@@ -47,5 +52,18 @@ class User {
       users.append(user)
     }
     return users
+  }
+
+  static func setPersistantUser(_ json: JSON) -> [User] {
+    NSKeyedArchiver.archiveRootObject(json.description, toFile: PropertyKey.ArchiveURL.path)
+    return User.getUsers(json)
+  }
+
+  static func getPersistantUser() -> [User] {
+    guard let jsonString = NSKeyedUnarchiver.unarchiveObject(withFile: PropertyKey.ArchiveURL.path) as? String else {
+      return [User]()
+    }
+    let json = JSON.parse(jsonString)
+    return self.getUsers(json)
   }
 }

@@ -41,6 +41,8 @@ class UserTableViewController: UIViewController {
 
     albumsManager = AppManager.sharedInstance.container.resolve(AlbumsManagerProtocol.self)
 
+    dataSource = albumsManager.userPersistant()
+
     nibRegistration()
     getUsers(albumsManager)
   }

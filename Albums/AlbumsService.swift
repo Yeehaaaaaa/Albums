@@ -38,7 +38,7 @@ class AlbumsService: AlbumsServiceProtocol {
     Network().request(requestParameters) { result in
       switch result {
       case .success(let json):
-        let users = User.getUsers(json)
+        let users = User.setPersistantUser(json)
         completion(Result.success(users))
       case .failure(let error):
         completion(Result.failure(error))
