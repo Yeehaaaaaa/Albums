@@ -33,6 +33,9 @@
                     <constraint firstAttribute="bottomMargin" secondItem="OGD-Y9-iIZ" secondAttribute="bottom" constant="3" id="uNq-H4-bgg"/>
                 </constraints>
             </tableViewCellContentView>
+            <accessibility key="accessibilityConfiguration">
+                <bool key="isElement" value="YES"/>
+            </accessibility>
             <connections>
                 <outlet property="titleLabel" destination="OGD-Y9-iIZ" id="Al2-k4-LSt"/>
             </connections>
